@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FA9A0F">
+  <meta name="format-detection" content="telephone=no">
+  <title>Equipo de Marketing | KINGFA</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html"><img src="assets/logo.png" alt="KINGFA 金发科技"></a>
+      <nav id="nav" aria-label="Principal"></nav>
+    </div>
+  </header>
+
+  <section class="portada">
+    <div class="contenedor">
+      <span class="etiqueta">Kingfa USA · Marketing</span>
+      <h1>Conoce a nuestro equipo de Marketing</h1>
+      <p>Somos las personas que acompañan a nuestros clientes con soluciones en materiales avanzados. Encuentra a tu contacto según tu región.</p>
+      <a class="boton" href="#regiones">Ver contactos por región →</a>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <h2>Quiénes somos</h2>
+      <p class="intro">El Departamento de Marketing de Kingfa USA conecta la capacidad de innovación de 金发科技 con las necesidades de cada mercado.</p>
+      <div class="valores">
+        <div class="valor"><strong>Cercanía</strong><p>Equipos locales que hablan el idioma de tu industria y de tu región.</p></div>
+        <div class="valor"><strong>Soporte técnico</strong><p>Ingenieros de ventas que te ayudan a elegir el material adecuado.</p></div>
+        <div class="valor"><strong>Respuesta ágil</strong><p>Un contacto directo por región para atenderte sin intermediarios.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion alt" id="regiones">
+    <div class="contenedor">
+      <h2>Contactos por región</h2>
+      <p class="intro">Selecciona una región para ver a sus integrantes y sus datos de contacto.</p>
+      <div class="regiones" id="lista-regiones"></div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <h2>Liderazgo</h2>
+      <p class="intro">Responsables del equipo para todas las regiones.</p>
+      <div class="liderazgo" id="direccion"></div>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <span><strong>KINGFA</strong> 金发科技 · Kingfa USA</span>
+      <span>Departamento de Marketing</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    navHTML("inicio");
+
+    document.getElementById("lista-regiones").innerHTML = REGIONES.map((r, i) => {
+      const total = r.integrantes.length;
+      return `
+        <a class="region" href="region.html?id=${r.id}">
+          <span class="esquina" aria-hidden="true"></span>
+          <span class="num">${String(i + 1).padStart(2, "0")}</span>
+          <h3>${escapar(r.nombre)}</h3>
+          <p>${escapar(r.descripcion)}</p>
+          <div class="meta">
+            <span class="conteo">${total} ${total === 1 ? "integrante" : "integrantes"}</span>
+            <span class="flecha">Ver contactos →</span>
+          </div>
+        </a>`;
+    }).join("");
+
+    document.getElementById("direccion").innerHTML =
+      LIDERAZGO.map((p) => personaHTML(p, { destacado: true, rol: p.rol })).join("");
+  </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+{
+  "chat_name": "MX Sales Group",
+  "room_type": "internal",
+  "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+  "member_count": 19,
+  "members": [
+    {
+      "display_name": "刘放(Jason Liu)",
+      "email": "liufang@kingfa.com.cn",
+      "position": "区域经理Regional Manager",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K018720",
+      "gender": "男",
+      "status": "正常",
+      "region": "All regions",
+      "team_role": "Mexico Manager"
+    },
+    {
+      "display_name": "陈平(Dylan)",
+      "email": "chenping@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": "524441116246",
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K013935",
+      "gender": "男",
+      "status": "正常",
+      "region": "Border"
+    },
+    {
+      "display_name": "商吉庆(Tim Shang)",
+      "email": "shangjiqing@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": "1-7346124054",
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "TK001962",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "王俊(William Wang)",
+      "email": "wangjun1@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K020720",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "谭荣帅(Roy Tan)",
+      "email": "tanrongshuai@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K021265",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "Walter Martinez",
+      "email": "waltermartinez@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K046484",
+      "gender": "男",
+      "status": "正常",
+      "region": "North"
+    },
+    {
+      "display_name": "Kalyd Ontiveros(Kalyd Ontiveros)",
+      "email": "kalydontiveros@kingfa.com",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "AK100196",
+      "gender": "男",
+      "status": "正常",
+      "region": "Center"
+    },
+    {
+      "display_name": "CelsoPalomar(cpalomar@kingfa.com)",
+      "email": "cpalomar@kingfa.com",
+      "position": "销售工程师Sales Engineer",
+      "phone": "525529684274",
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "AK100177",
+      "gender": "男",
+      "status": "正常",
+      "region": "Center"
+    },
+    {
+      "display_name": "Ernesto Perez",
+      "email": "ernestoperez@kingfa.com",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K036295",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "高承希(Blake)",
+      "email": "gaochengxi@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K033930",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "Arturo Torres",
+      "email": null,
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K047285",
+      "gender": "男",
+      "status": "正常",
+      "region": "Center"
+    },
+    {
+      "display_name": "Jordi Alec Perez Cruz",
+      "email": "jperez@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K040940",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "KAWAGUCHI TETSUHIRO(Hiro)",
+      "email": "KAWAGUCHITETSUHIRO@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K043478",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "Pablo Pacheco",
+      "email": "pablopacheco@kingfa.com",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K036583",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "Julio Cesar Madera Nunez",
+      "email": "julionunez@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K042460",
+      "gender": "男",
+      "status": "正常",
+      "region": "Bajio"
+    },
+    {
+      "display_name": "ChengHsunWu(Jay Wu)",
+      "email": "jaywu@kingfa.com.cn",
+      "position": "销售工程师Sales Engineer",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "AK100181",
+      "gender": "男",
+      "status": "正常",
+      "region": "Border"
+    },
+    {
+      "display_name": "Joshua Hernandez",
+      "email": null,
+      "position": "销售工程师Sales Engineer",
+      "phone": "5527395599",
+      "department": "金发科技股份有限公司/美国金发/市场部/墨西哥区",
+      "employee_id": "K046456",
+      "gender": "男",
+      "status": "正常",
+      "region": "Center"
+    },
+    {
+      "display_name": "许柏华(Sam)",
+      "email": "xubohua@kingfa.com.cn",
+      "position": "营销总经理助理兼美国金发市场部部长Assistant to the Marketing General Manager & Head of Kingfa USA Marketing Department",
+      "phone": null,
+      "department": "金发科技股份有限公司/美国金发/市场部",
+      "employee_id": "K008455",
+      "gender": "男",
+      "status": "正常",
+      "region": "All regions",
+      "team_role": "America's Marketing Head"
+    }
+  ],
+  "regions": [
+    "Border",
+    "Bajio",
+    "North",
+    "Center"
+  ]
+}

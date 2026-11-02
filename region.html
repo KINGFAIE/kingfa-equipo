@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FA9A0F">
+  <meta name="format-detection" content="telephone=no">
+  <title>Región | Equipo de Marketing KINGFA</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html"><img src="assets/logo.png" alt="KINGFA 金发科技"></a>
+      <nav id="nav" aria-label="Principal"></nav>
+    </div>
+  </header>
+
+  <section class="portada">
+    <div class="contenedor">
+      <div class="migas"><a href="index.html">Inicio</a> / <span id="miga"></span></div>
+      <h1 id="titulo"></h1>
+      <p id="subtitulo"></p>
+    </div>
+  </section>
+
+  <section class="seccion" id="seccion-responsable">
+    <div class="contenedor">
+      <h2>Liderazgo</h2>
+      <p class="intro">Responsables del equipo de Marketing para todas las regiones.</p>
+      <div class="liderazgo" id="responsable"></div>
+    </div>
+  </section>
+
+  <section class="seccion alt">
+    <div class="contenedor">
+      <h2>Integrantes</h2>
+      <p class="intro" id="conteo"></p>
+      <input class="buscador" id="buscador" type="search" placeholder="Buscar por nombre o correo…" aria-label="Buscar integrante">
+      <div class="cuadricula" id="integrantes"></div>
+      <p class="sin-resultados" id="sin-resultados">No se encontraron integrantes con ese criterio.</p>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <span><strong>KINGFA</strong> 金发科技 · Kingfa USA</span>
+      <span><a href="index.html">← Volver al inicio</a></span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const id = new URLSearchParams(location.search).get("id");
+    const region = REGIONES.find((r) => r.id === id) || REGIONES[0];
+
+    navHTML(region.id);
+    document.title = `${region.nombre} | Equipo de Marketing KINGFA`;
+    document.getElementById("miga").textContent = region.nombre;
+    document.getElementById("titulo").textContent = `Equipo ${region.nombre}`;
+    document.getElementById("subtitulo").textContent =
+      `Kingfa USA · Departamento de Marketing · Región ${region.nombre}`;
+
+    document.getElementById("responsable").innerHTML =
+      LIDERAZGO.map((p) => personaHTML(p, { destacado: true, rol: p.rol })).join("");
+
+    const n = region.integrantes.length;
+    document.getElementById("conteo").textContent = n === 1
+      ? "1 ingeniero de ventas listo para atenderte."
+      : `${n} ingenieros de ventas listos para atenderte.`;
+    const cont = document.getElementById("integrantes");
+    cont.innerHTML = region.integrantes.map((p) => personaHTML(p)).join("");
+
+    document.getElementById("buscador").addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      let visibles = 0;
+      cont.querySelectorAll(".persona").forEach((el) => {
+        const ok = el.dataset.busqueda.includes(q);
+        el.style.display = ok ? "" : "none";
+        if (ok) visibles++;
+      });
+      document.getElementById("sin-resultados").style.display = visibles ? "none" : "block";
+    });
+  </script>
+</body>
+</html>
