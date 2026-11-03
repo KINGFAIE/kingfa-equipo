@@ -400,3 +400,15 @@ img, svg { max-width: 100%; }
   .portada .f-estrella.e1 { top: 8px; right: -34px; width: 104px; height: 104px; }
   .portada h1, .portada p { max-width: calc(100% - 40px); }
 }
+
+/* Líderes de equipo por región */
+.seccion-lideres { background: linear-gradient(180deg, var(--naranja-suave), #fff 85%); }
+.persona.lider { border: 2px solid var(--naranja); }
+.persona.lider::after { background: var(--naranja); }
+.persona.lider .avatar { background: var(--naranja); color: #fff; }
+.persona.lider .avatar::after {
+  content: ""; position: absolute; right: -5px; top: -5px; width: 16px; height: 16px;
+  background: var(--rojo); clip-path: var(--estrella);
+}
+.region .lider-region { color: var(--texto); font-size: 0.9rem; }
+.region .lider-region b { color: var(--rojo); }

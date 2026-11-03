@@ -35,6 +35,14 @@
     </div>
   </section>
 
+  <section class="seccion seccion-lideres" id="seccion-lideres">
+    <div class="contenedor">
+      <h2>Líderes de equipo</h2>
+      <p class="intro" id="intro-lideres"></p>
+      <div class="cuadricula lideres" id="lideres"></div>
+    </div>
+  </section>
+
   <section class="seccion alt">
     <div class="contenedor">
       <h2>Integrantes</h2>
@@ -67,6 +75,17 @@
 
     document.getElementById("responsable").innerHTML =
       LIDERAZGO.map((p) => personaHTML(p, { destacado: true, rol: p.rol })).join("");
+
+    const lideres = region.lideres || [];
+    if (lideres.length) {
+      document.getElementById("intro-lideres").textContent = lideres.length === 1
+        ? `Coordina al equipo de la región ${region.nombre}.`
+        : `Coordinan al equipo de la región ${region.nombre}.`;
+      document.getElementById("lideres").innerHTML =
+        lideres.map((p) => personaHTML(p, { rol: "Líder de equipo", lider: true })).join("");
+    } else {
+      document.getElementById("seccion-lideres").remove();
+    }
 
     const n = region.integrantes.length;
     document.getElementById("conteo").textContent = n === 1

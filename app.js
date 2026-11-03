@@ -40,9 +40,9 @@ function contactosHTML(p) {
   return `<div class="contactos">${partes.join("")}</div>`;
 }
 
-function personaHTML(p, { destacado = false, rol = "" } = {}) {
+function personaHTML(p, { destacado = false, lider = false, rol = "" } = {}) {
   return `
-    <article class="persona${destacado ? " destacado" : ""}" data-busqueda="${escapar(
+    <article class="persona${destacado ? " destacado" : ""}${lider ? " lider" : ""}" data-busqueda="${escapar(
       [p.nombre, p.nombreLocal, p.puesto, p.email].join(" ").toLowerCase()
     )}">
       <div class="cabeza">

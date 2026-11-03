@@ -3,6 +3,7 @@
  * Fuente: MX_Sales_Group_Members_Detailed.json (campo "region").
  *
  * LIDERAZGO aparece arriba en TODAS las páginas de región.
+ * "lideres" son los líderes de equipo de cada región (se muestran antes de los integrantes).
  * Para agregar una región nueva, añade un objeto a REGIONES con el mismo formato.
  */
 
@@ -26,30 +27,32 @@ const LIDERAZGO = [
 ];
 
 const ING = "Ingeniero de Ventas";
+const LIDER = "Ingeniero de Ventas"; // la etiqueta "Líder de equipo" se agrega en la tarjeta
 
 const REGIONES = [
   {
     id: "frontera",
     nombre: "Frontera",
     descripcion: "Equipo que atiende a clientes de la región Frontera.",
+    lideres: [
+      { nombre: "Dylan", nombreLocal: "陈平", puesto: LIDER, email: "chenping@kingfa.com.cn", telefono: "+52 444 111 6246" },
+    ],
     integrantes: [
-      { nombre: "Dylan", nombreLocal: "陈平", puesto: ING, email: "chenping@kingfa.com.cn", telefono: "+52 444 111 6246" },
       { nombre: "Jay Wu", puesto: ING, email: "jaywu@kingfa.com.cn", telefono: null },
-      { nombre: "Kevin Omar Garza Loya", puesto: ING, email: "kevingarza@kingfa.com.cn", telefono: null },
     ],
   },
   {
     id: "bajio",
     nombre: "Bajío",
     descripcion: "Equipo que atiende a clientes de la región Bajío.",
+    lideres: [
+      { nombre: "Tim Shang", nombreLocal: "商吉庆", puesto: LIDER, email: "shangjiqing@kingfa.com.cn", telefono: "+1 734 612 4054" },
+    ],
     integrantes: [
-      { nombre: "Tim Shang", nombreLocal: "商吉庆", puesto: ING, email: "shangjiqing@kingfa.com.cn", telefono: "+1 734 612 4054" },
-      { nombre: "William Wang", nombreLocal: "王俊", puesto: ING, email: "wangjun1@kingfa.com.cn", telefono: null },
       { nombre: "Roy Tan", nombreLocal: "谭荣帅", puesto: ING, email: "tanrongshuai@kingfa.com.cn", telefono: null },
       { nombre: "Blake", nombreLocal: "高承希", puesto: ING, email: "gaochengxi@kingfa.com.cn", telefono: null },
       { nombre: "Hiro Kawaguchi", puesto: ING, email: "KAWAGUCHITETSUHIRO@kingfa.com.cn", telefono: null },
       { nombre: "Ernesto Perez", puesto: ING, email: "ernestoperez@kingfa.com", telefono: null },
-      { nombre: "Jordi Alec Perez Cruz", puesto: ING, email: "jperez@kingfa.com.cn", telefono: null },
       { nombre: "Pablo Pacheco", puesto: ING, email: "pablopacheco@kingfa.com", telefono: null },
       { nombre: "Julio Cesar Madera Nuñez", puesto: ING, email: "julionunez@kingfa.com.cn", telefono: null },
     ],
@@ -58,6 +61,10 @@ const REGIONES = [
     id: "norte",
     nombre: "Norte",
     descripcion: "Equipo que atiende a clientes de la región Norte.",
+    lideres: [
+      { nombre: "Jordi Alec Perez Cruz", puesto: LIDER, email: "jperez@kingfa.com.cn", telefono: null },
+      { nombre: "William Wang", nombreLocal: "王俊", puesto: LIDER, email: "wangjun1@kingfa.com.cn", telefono: null },
+    ],
     integrantes: [
       { nombre: "Walter Martinez", puesto: ING, email: "waltermartinez@kingfa.com.cn", telefono: null },
     ],
@@ -66,9 +73,11 @@ const REGIONES = [
     id: "centro",
     nombre: "Centro",
     descripcion: "Equipo que atiende a clientes de la región Centro.",
+    lideres: [
+      { nombre: "Celso Palomar", puesto: LIDER, email: "cpalomar@kingfa.com", telefono: "+52 55 2968 4274" },
+    ],
     integrantes: [
       { nombre: "Kalyd Ontiveros", puesto: ING, email: "kalydontiveros@kingfa.com", telefono: null },
-      { nombre: "Celso Palomar", puesto: ING, email: "cpalomar@kingfa.com", telefono: "+52 55 2968 4274" },
       { nombre: "Arturo Torres", puesto: ING, email: null, telefono: null },
       { nombre: "Joshua Hernandez", puesto: ING, email: null, telefono: "+52 55 2739 5599" },
     ],

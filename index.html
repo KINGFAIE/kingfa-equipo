@@ -69,13 +69,15 @@
     navHTML("inicio");
 
     document.getElementById("lista-regiones").innerHTML = REGIONES.map((r, i) => {
-      const total = r.integrantes.length;
+      const lideres = r.lideres || [];
+      const total = r.integrantes.length + lideres.length;
       return `
         <a class="region" href="region.html?id=${r.id}">
           <span class="esquina" aria-hidden="true"></span>
           <span class="num">${String(i + 1).padStart(2, "0")}</span>
           <h3>${escapar(r.nombre)}</h3>
           <p>${escapar(r.descripcion)}</p>
+          ${lideres.length ? `<p class="lider-region"><b>${lideres.length === 1 ? "Líder" : "Líderes"}:</b> ${lideres.map((l) => escapar(l.nombre)).join(" y ")}</p>` : ""}
           <div class="meta">
             <span class="conteo">${total} ${total === 1 ? "integrante" : "integrantes"}</span>
             <span class="flecha">Ver contactos →</span>
