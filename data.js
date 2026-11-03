@@ -77,8 +77,8 @@ const REGIONES = [
       { nombre: "Celso Palomar", puesto: LIDER, email: "cpalomar@kingfa.com", telefono: "+52 55 2968 4274" },
     ],
     integrantes: [
-      { nombre: "Kalyd Ontiveros", puesto: ING, email: "kalydontiveros@kingfa.com", telefono: null },
-      { nombre: "Arturo Torres", puesto: ING, email: null, telefono: null },
+      { nombre: "Kalyd Ontiveros", puesto: ING, email: "kalydontiveros@kingfa.com", telefono: "+52 55 2521 9781" },
+      { nombre: "Arturo Torres", puesto: ING, email: "arturotorres@kingfa.com", telefono: "+52 221 146 7420" },
       { nombre: "Joshua Hernandez", puesto: ING, email: null, telefono: "+52 55 2739 5599" },
     ],
   },

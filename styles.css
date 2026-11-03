@@ -412,3 +412,12 @@ img, svg { max-width: 100%; }
 }
 .region .lider-region { color: var(--texto); font-size: 0.9rem; }
 .region .lider-region b { color: var(--rojo); }
+
+/* Líder de equipo: tarjeta a lo ancho de la fila, dentro de Integrantes */
+.persona.lider {
+  grid-column: 1 / -1;
+  flex-direction: row; flex-wrap: wrap; align-items: center; gap: 14px 32px;
+  background: linear-gradient(90deg, var(--naranja-suave), #fff 60%);
+}
+.persona.lider .cabeza { flex: 1 1 300px; }
+.persona.lider .contactos { flex: 1 1 280px; margin-top: 0; }

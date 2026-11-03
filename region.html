@@ -35,14 +35,6 @@
     </div>
   </section>
 
-  <section class="seccion seccion-lideres" id="seccion-lideres">
-    <div class="contenedor">
-      <h2>Líderes de equipo</h2>
-      <p class="intro" id="intro-lideres"></p>
-      <div class="cuadricula lideres" id="lideres"></div>
-    </div>
-  </section>
-
   <section class="seccion alt">
     <div class="contenedor">
       <h2>Integrantes</h2>
@@ -77,22 +69,14 @@
       LIDERAZGO.map((p) => personaHTML(p, { destacado: true, rol: p.rol })).join("");
 
     const lideres = region.lideres || [];
-    if (lideres.length) {
-      document.getElementById("intro-lideres").textContent = lideres.length === 1
-        ? `Coordina al equipo de la región ${region.nombre}.`
-        : `Coordinan al equipo de la región ${region.nombre}.`;
-      document.getElementById("lideres").innerHTML =
-        lideres.map((p) => personaHTML(p, { rol: "Líder de equipo", lider: true })).join("");
-    } else {
-      document.getElementById("seccion-lideres").remove();
-    }
-
-    const n = region.integrantes.length;
+    const n = lideres.length + region.integrantes.length;
     document.getElementById("conteo").textContent = n === 1
-      ? "1 ingeniero de ventas listo para atenderte."
-      : `${n} ingenieros de ventas listos para atenderte.`;
+      ? "1 integrante listo para atenderte."
+      : `${n} integrantes listos para atenderte.`;
     const cont = document.getElementById("integrantes");
-    cont.innerHTML = region.integrantes.map((p) => personaHTML(p)).join("");
+    cont.innerHTML =
+      lideres.map((p) => personaHTML(p, { rol: "Líder de equipo", lider: true })).join("") +
+      region.integrantes.map((p) => personaHTML(p)).join("");
 
     document.getElementById("buscador").addEventListener("input", (e) => {
       const q = e.target.value.trim().toLowerCase();
